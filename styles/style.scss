@@ -40,12 +40,37 @@ main {
     text-align: center;    
 }
 h3 {
+    position: relative;
     padding-top: 0.5px;
     padding-bottom: 0.5px;
-    background-color: #191a23;// #979797 #343650
+    //background-color: #191a23;// #979797 #343650
     color: #FB5E84;
     font-size: 2.57rem;
     line-height: 71px;
+   
+}
+h3::before {
+    content: "";
+    width: 100%;
+    height: 50%;
+    background-color: #979797;
+    opacity: .4;
+    position: absolute;
+    z-index: 7;
+    left: 0;
+    top: 50%;
+    border-radius: 4px;
+}
+h3::after {
+    content: "";
+    width: 100%;
+    height: 50%;
+    background-color:  #191a23;
+    opacity: .4;
+    position: absolute;
+    z-index: 7;
+    left: 0;
+    top: 0%;
     border-radius: 4px;
 }
 p {
