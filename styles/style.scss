@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
-$bg-color: #000000;
+$bg-color: #191A23;
 
 * {
     margin: 0;
@@ -9,6 +9,7 @@ $bg-color: #000000;
 
 body {
     background-color: $bg-color;
+    //background-image: linear-gradient($bg-color, #000000);
     color: white;
     font-family: 'Red Hat Text', sans-serif;
     font-size: 14px;
@@ -26,7 +27,7 @@ h1 {
 }
 
 header {
-    width: 78.5%;
+    width: 82%;
     margin: 142px auto 0;
 }
 
@@ -58,7 +59,7 @@ h3 {
     //background-color: #191a23;// #979797 #343650
     color: #FB5E84;
     font-size: 2.57rem;
-    line-height: 71px;
+    line-height: 66px;
 
 }
 
@@ -76,34 +77,32 @@ h3::before {
     background-color: #979797;
     left: 0;
     top: 50%;
-    box-shadow: 0 4px 0 0 #3d3d3a;
+    box-shadow: 0 5px 0 0 #000000;
     border-radius: 0px 0px 4px 4px;
 }
-.timer::before {
-    position: absolute;
-    content: "";
-    width: 10px;
-    height: 10px;
-    background-color: #181616;
-    left: -2px;
-    top: 34%;
-    border-radius: 50%;
-    z-index: 10;
-}
+
+.timer::before,
 .timer::after {
     position: absolute;
     content: "";
     width: 10px;
     height: 10px;
-    background-color: #181616;
-    right: -2px;
-    top: 34%;
+    background-color: $bg-color;
     border-radius: 50%;
     z-index: 10;
+    top: 31%;
+}
+
+.timer::before {
+    left: -5px;
+}
+
+.timer::after {
+    right: -5px;
 }
 
 h3::after {
-    background-color: #191a23;
+    background-color: #343650;
     left: 0;
     top: 0%;
     border-radius: 4px 4px 0px 0px;
@@ -113,7 +112,8 @@ p {
     font-size: 0.5rem;
     letter-spacing: 2.96px;
     padding-bottom: 0px;
-    padding-top: 4px;
+    padding-top: 10px;
+    color: #8385A9;
 }
 
 footer {
@@ -152,17 +152,35 @@ svg:hover {
 }
 
 @media screen and (min-width: 890px) {
+    header {
+        margin: 135px auto 0;
+    }
+
     h1 {
         width: 35.45%;
-        text-align: center;        
+        text-align: center;
         margin: auto;
     }
+
     .timer {
-        width: 184px;        
+        width: 184px;
     }
-    h3 {        
-        padding-top: 40px;
-        padding-bottom: 40px;       
+
+    .timer::before,
+    .timer::after {
+        top: 40%;
+    }
+
+    h3 {
+        padding-top: 33.5px;
+        padding-bottom: 33.5px;
         line-height: 84px;
+    }
+    .countdown {        
+        margin: 104px auto;  
+        gap: 32px;     
+    }
+    footer {
+        margin-top: 151px;       
     }
 }
